@@ -24,3 +24,6 @@
 
 - key: "Anonymous Feedback"
   value: <button type="button" class="btn btn-primary" href="feedback.html" onclick=countClicks()>click here</button>
+
+- key: "Clicks"
+  value: {clickCounts()}
