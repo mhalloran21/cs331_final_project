@@ -23,4 +23,4 @@
   value: <a href="https://glow.williams.edu/courses/3267514">GLOW</a>
 
 - key: "Anonymous Feedback"
-  value: <a href="feedback.html">click here</a>
+  value: <button type="button" class="btn btn-primary" href="feedback.html">click here</button>
