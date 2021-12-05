@@ -1,0 +1,38 @@
+- number: 1
+  date: Thursday, 9/9
+  topic: Syllabus
+  handouts: <a href="assets/handouts/01_syllabus.pdf" target="_blank">01_syllabus.pdf</a>
+- number: 2
+  date: Thursday, 9/9
+  topic: Honor Code
+  handouts: <a href="assets/handouts/02_honor_code.pdf" target="_blank">02_honor_code.pdf</a>
+- number: 3
+  date: Thursday, 9/9
+  topic: Syllabus
+  handouts: <a href="assets/handouts/03_code_of_ethics.pdf" target="_blank">03_code_of_ethics.pdf</a>
+- number: 4
+  date: Thursday, 9/9
+  topic: Schedule
+  handouts: <a href="assets/handouts/04_schedule.pdf" target="_blank">04_schedule.pdf</a>
+- number: 5
+  date: Thursday, 9/9
+  topic: |+
+    Estimated Time to Complete Out-of-class Assignments
+    (if you find yourself taking significantly longer, please see me)
+  handouts: <a href="assets/handouts/05_estimated_work_hours.pdf" target="_blank">05_estimated_work_hours.pdf</a>
+- number: 6
+  date: Monday, 9/13
+  topic: |+
+    Rules for Boxes and Arrows Memory Model
+  handouts: <a href="assets/handouts/06_rules_for_boxes_and_arrows_model.pdf" target="_blank">06_rules_for_boxes_and_arrows_model.pdf</a>
+- number: 7
+  date: Saturday, 10/16
+  topic: |+
+    Instructions for enabling SSH server on your Raspberry Pi
+  handouts: <a href="assets/misc/ssh_howto.html">Instructions</a>
+- number: 8
+  date: Monday, 10/25
+  topic: |+
+    An abridged description of the ARMv6 instruction set architecture.
+  handouts: |+
+    <a href="assets/handouts/arm_reference.pdf">arm_reference.pdf</a>

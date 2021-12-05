@@ -1,0 +1,38 @@
+/*
+ * This program has two big bugs:
+ * 1. We use an automatic variable, r, in create_record
+ *    which allocates r on the call stack.  The create_record
+ *    function returns a pointer to that data, but it points
+ *    into a stack frame that no longer exists, which is a bug.
+ *
+ * 2. The arguments to create_record are pointers to strings,
+ *    but the fields of the struct are not pointers: they're
+ *    arrays.  This is a type error.  Go ahead, try to compile
+ *    and see what you get.
+ */
+
+#include <stdio.h>
+
+typedef struct record {
+  char first_name[20];
+  char last_name[20];
+  char identifier[20];
+} record_t;
+
+record_t* create_record(char* fname, char* lname, char* id) {
+  record_t r;
+  r.first_name = fname;
+  r.last_name = lname;
+  r.identifier = id;
+  return &r;
+}
+
+int main() {
+  record_t* r = create_record("Jason", "Bourne", "70014051");
+  printf("First name: %s\n", r->first_name);
+  printf("Last name: %s\n", r->last_name);
+  printf("Identifier: %s\n", r->identifier);
+  
+  return 0;
+}
+

@@ -1,0 +1,11 @@
+/* This example shows a failure to initialize a variable.
+ * What is its output?
+ */
+
+#include <stdio.h>
+
+int main() {
+  int num;
+  printf("%d rocks!\n", num);
+  return 0;
+}

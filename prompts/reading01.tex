@@ -1,0 +1,53 @@
+%%% DO NOT CHANGE ANYTHING FROM HERE %%%
+\documentclass[11pt]{article}
+\makeatletter
+
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{graphicx}
+\usepackage{fullpage} % changes the margin
+\usepackage{todonotes} % todos
+
+
+\begin{document}
+%%% TO HERE; MAKE CHANGES BELOW. %%%
+
+\noindent
+\large\textbf{Reading Response 1} \\  
+\normalsize Stoll, Clifford.  The Cuckoo's Egg, pages 1---58, 1989.
+\\ \\
+\todo[inline]{After you have filled in your name below, remove this note.}
+\textbf{Firstname Lastname} \\
+\normalsize  Due Date: September 15, 2021 by 11:59pm (printed, in my mailbox in the CS common area)
+
+\begin{enumerate}
+	\item \emph{Explain the \texttt{emacs} ``movemail'' bug. Stoll’s description is light on detail, so you will need to do a little research (e.g., using Google) on your own. Be sure that your answer uses the words ``setuid'' and ``privilege escalation.''}
+	
+	\todo[inline]{Your response here.}
+	
+	\item \emph{On page 40, Stoll notes that the hacker accessed an encrypted password file. First, what is an encrypted password file? Second, why is or why isn’t the hacker’s access of this file a cause for concern? Refer to the official password file documentation for Linux (i.e., the password file ``\texttt{man} page'') and note that \underline{The Cuckoo’s Egg} takes place in the “good old days.” If you use any jargon in your answer (e.g., ``crack''), be sure to define it. Be prepared to do a little digging to provide a good answer.}
+	
+	\todo[inline]{Your response here.}
+
+	\item \emph{Here is an entry in the \texttt{/etc/shadow} file for a modern computer on which I have an account:}
+
+	\begin{sloppypar}
+	\texttt{dbarowy:\$6\$Yvba7lX/suhF9Ahd\$wbJ0hEVyDhZtli8h6xjV0OtF5i4DHNUsUw0FRpBw $\ldots$}
+	\end{sloppypar}
+
+
+	\emph{What encryption algorithm is being used to obscure my password, and is it a ``trapdoor'' function or something else? You will need to find the appropriate \texttt{man} page to answer this question.}
+	
+	\todo[inline]{Your response here.}
+	
+	\item \emph{Stoll notes that the computer running on the network address \texttt{26.0.0.113} belonged to the US Department of Defense. Who owns it now? Use the \texttt{whois} tool to answer.}
+
+	\todo[inline]{Your response here.}
+
+	\item \emph{Suppose you want to ``trace'' the path that data takes between your own computer and another computer at a given address. You can use a \texttt{traceroute} tool to perform this task. What networks do connections from your computer to \texttt{26.0.0.113} cross? Assume your computer is in New York, NY. You will need to use the \texttt{whois} tool above to find network names. What do you think the output \texttt{???} means?}
+	
+	\todo[inline]{Your response here.}
+\end{enumerate}
+
+\end{document}
+

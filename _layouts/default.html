@@ -1,10 +1,103 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
+  
   {%- include head.html -%}
 
   <body>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+	  tex2jax: {
+	      inlineMath: [ ["\\(","\\)"] ],
+	      processEscapes: true
+	  }
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML' async></script>
+    <script>
+      (function() {
+	  function strikethrough(){
+	      document.body.innerHTML = document.body.innerHTML.replace(
+		  /\~\~(.+?)\~\~/gim,
+		  '<del>$1</del>'
+	      );
+	  }
+	  strikethrough();
+      })();
+    </script>
+	  <!-- 
+	  dinosaur-comics-587.png -->
+	  
+	  
+    <script type="text/javascript">
+      let data = [
+	  { url: "assets/images/comics/dinosaur-comics-1663.png",
+	    mouseover: "people who skip ahead to the last panel to read the punchline first: OH NO, LOOKS LIKE YOUR PRECIOUS LITTLE PLAN HAS BACKFIRED THIS TIME",
+	    linkto: "https://qwantz.com/index.php?comic=1663" },
+	  { url: "assets/images/comics/dinosaur-comics-2141.png",
+	    mouseover: "\"EVEN IF YOU STORE MY PASSWORD IN AN ENCODED OR HASHED FORMAT (RECOVERABLE OR OTHERWISE) YOU CONSENT AND AGREE TO MY TERMS; AGAIN: NO TAKEBACKS AND/OR MULLIGANS\"",
+	    linkto: "https://qwantz.com/index.php?comic=2141" },
+	  { url: "assets/images/comics/dinosaur-comics-3300.png",
+	    mouseover: "tomorrow: ERROR 0xaf9925 - HAH HAH JUST KIDDING, WHY IS EVERYONE MAD AT ME",
+	    linkto: "https://qwantz.com/index.php?comic=3300" },
+	  { url: "assets/images/comics/dinosaur-comics-3058.png",
+	    mouseover: "LATER: somehow - SOMEHOW - the internet has become the source of 100% of my problems",
+	    linkto: "https://qwantz.com/index.php?comic=3058" },
+  	  { url: "assets/images/comics/dinosaur-comics-3273.png",
+	    mouseover: "YOU THINK I'M GOING TO UPLOAD MY BRAIN TO - WHAT, &quot;THE INTERNET&quot;?  WHAT DOES THAT MEAN?  WHAT DO YOU THINK THAT MEANS?  WHAT DO YOU THINK I WILL EXPERIENCE REALITY AS",
+	    linkto: "https://qwantz.com/index.php?comic=3273" },
+	  { url: "assets/images/comics/dinosaur-comics-3336.png",
+	    mouseover: "ou either die a nerd, or live long enough to see yourself become a jock.  or maybe there's a third option too.  probably there's lots of ways to live your life when you really think about it",
+	    linkto: "https://qwantz.com/index.php?comic=3336" },
+	  { url: "assets/images/comics/dinosaur-comics-548.png",
+	    mouseover: "and you thought there wouldn't be any actual programming advice in the comic.  for shame!",
+	    linkto: "https://qwantz.com/index.php?comic=548" },
+	  { url: "assets/images/comics/dinosaur-comics-684.png",
+	    mouseover: "if you could find a way to factor numbers quickly, you would undermine tons of cryptographic systems overnight.  crazy!  there is a way to do this using quantum computers, but luckily only really tiny quantum computers exist.  one DID recently factor the number 15 into 3 and 5, though!\n\nRUH ROH",
+	    linkto: "https://qwantz.com/index.php?comic=684" },
+	  { url: "assets/images/comics/final_exam.png",
+	    mouseover: "For those of you also taking Game Theory, your grade in that class will be based on how close your grade on this exam is to 80% of the average.",
+	    linkto: "https://xkcd.com/2385/" },
+      { url: "assets/images/comics/hands.jpg",
+        mouseover: "",
+        linkto: "https://www.webtoons.com/en/challenge/system32comics/list?title_no=235074&page=1" },
+      { url: "assets/images/comics/survey.jpg",
+        mouseover: "",
+        linkto: "https://www.webtoons.com/en/challenge/system32comics/list?title_no=235074&page=1" },
+      { url: "assets/images/comics/bullets.jpg",
+        mouseover: "",
+        linkto: "" },
+      { url: "assets/images/comics/identity_theft.jpg",
+        mouseover: "",
+        linkto: "" },
+      { url: "assets/images/comics/cyberwar.jpg",
+        mouseover: "",
+        linkto: "" },
+      { url: "assets/images/comics/jknewcartoon0814.jpg",
+        mouseover: "",
+        linkto: "https://www.darkreading.com/endpoint/cartoon-identity-theft-mitigation/d/d-id/1335520" },
+      { url: "assets/images/comics/passwords.jpg",
+        mouseover: "",
+        linkto: "" },
+      { url: "assets/images/comics/smbc-1898.gif",
+        mouseover: "",
+        linkto: "https://www.smbc-comics.com/index.php?db=comics&id=1898" },
+      { url: "assets/images/comics/2012-05-02-beartato-hackthedatabase.png",
+        mouseover: "now look up 'how to go jump on a trampoline' instead",
+        linkto: "http://nedroid.com/2012/05/honk-the-databus/" },
+      { url: "assets/images/comics/9xz210u9t8d71.png",
+        mouseover: "",
+        linkto: "https://www.reddit.com/r/comics/comments/or0b0x/russian_hack/" }
+      ];
 
+      function randomXKCD() {
+	  let i = Math.floor(Math.random() * data.length);
+	  let xkcd = data[i];
+	  let tag = '<a href="' + xkcd.linkto + '"><img src="' + xkcd.url + '" title="' + xkcd.mouseover + '" /></a>';
+	  return tag;
+      }
+      
+    </script>
+    
     {%- include header.html -%}
 
     <div class="py-5">

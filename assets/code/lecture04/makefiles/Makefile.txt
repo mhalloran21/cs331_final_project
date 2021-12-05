@@ -1,0 +1,19 @@
+CFLAGS=-Wall
+
+.PHONY: all
+all: program
+
+a.o: a.h a.c
+	gcc $(CFLAGS) -c a.c
+
+b.o: b.h b.c
+	gcc $(CFLAGS) -c b.c
+
+program: c.c a.o b.o
+	gcc $(CFLAGS) c.c a.o b.o -o program
+
+.PHONY: clean
+clean:
+	rm -f *.o
+	rm -f program
+

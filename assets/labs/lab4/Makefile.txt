@@ -1,0 +1,34 @@
+# gcc -v lab4.c -o lab4
+.PHONY: all clean
+all: lab4
+
+# preprocess C
+lab4_expanded.c: lab4.c
+	cpp lab4.c -o lab4_expanded.c
+
+# translate C to assembly
+lab4_expanded.s: lab4_expanded.c
+	/usr/lib/gcc/arm-linux-gnueabihf/8/cc1 lab4_expanded.c
+
+# assemble object code
+lab4.o: lab4_expanded.s
+	as lab4_expanded.s -o lab4.o
+
+# link objects
+lab4: lab4.o
+	ld \
+	  -dynamic-linker=/lib/ld-linux-armhf.so.3 \
+	  /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o \
+	  /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o \
+	  /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o \
+	  /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o \
+	  /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o \
+	  lab4.o \
+	  -o lab4 \
+	  -lc
+
+clean:
+	@rm -f lab4_expanded.c
+	@rm -f *.s
+	@rm -f *.o
+	@rm -f lab4

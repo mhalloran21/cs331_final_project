@@ -1,0 +1,18 @@
+/* This example shows how to allocate memory on the heap.
+ * Always be sure to free() memory that you malloc()!
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int *num_ptr = malloc(sizeof(int));
+  if (!num_ptr) {
+    printf("Unable to allocate %lu bytes.\n", sizeof(int));
+    exit(1);
+  }
+  *num_ptr = 331;
+  printf("%d rocks!\n", *num_ptr);
+  free(num_ptr);
+  return 0;
+}

@@ -1,0 +1,11 @@
+/* This example shows how to allocate memory on the stack.
+ * Stack variables are automatically reclaimed.
+ */
+
+#include <stdio.h>
+
+int main() {
+  int num = 331;
+  printf("%d rocks!\n", num);
+  return 0;
+}

@@ -1,0 +1,10 @@
+/* This example shows basic use of a pointer. */
+
+#include <stdio.h>
+
+int main() {
+  int num = 4;
+  int *num_ptr = &num;  // set the value of num_ptr to the address of num
+  printf("num = %d, and it is stored at %p.\n", num, num_ptr);
+  return 0;
+}

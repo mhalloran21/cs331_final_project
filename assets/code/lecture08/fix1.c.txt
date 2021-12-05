@@ -1,0 +1,41 @@
+/*
+ * This program fixes the buggy program by allocating the
+ * struct manually.  Don't forget to free!
+ *
+ * We also use strcpy to copy the strings, since assignment
+ * using = in this context would only copy pointers.  Note:
+ * strcpy is a dangerous function!
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct record {
+  char first_name[20];
+  char last_name[20];
+  char identifier[20];
+} record_t;
+
+record_t* create_record(char* fname, char* lname, char* id) {
+  record_t* r = malloc(sizeof(record_t));  // if we malloc, we must free
+  if (!r) {
+    fprintf(stderr, "Unable to allocate record.\n");
+    exit(1);
+  }
+
+  strcpy(r->first_name, fname);
+  strcpy(r->last_name, lname);
+  strcpy(r->identifier, id);
+  return r;
+}
+
+int main() {
+  record_t* r = create_record("Jason", "Bourne", "70014051");
+  printf("First name: %s\n", r->first_name);
+  printf("Last name: %s\n", r->last_name);
+  printf("Identifier: %s\n", r->identifier);
+  free(r); // free down here, when we're done
+  return 0;
+}
+

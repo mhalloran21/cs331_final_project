@@ -1,0 +1,38 @@
+exploitable function (gets) address:
+vulnerable function: 
+return address stored in vulnerable function: 
+location of buffer inside GDB (lower): 
+size of buffer: 
+state of stack before attack: 
+size of buffer + bytes needed to overwrite retaddr: 
+location of buffer outside GDB (higher): 
+difference between buffer addresses: 
+location to jump to: 
+address encoded as hex literals: 
+
+SHELLCODE
+
+main: 
+main2: 
+shell: 
+
+virtual address start of main2 (hex): 
+virtual address end of main2 (hex): 
+size of main2: 
+start address of main2 on disk (octal): 
+start address of main2 on disk (decimal): 
+ dd if=shellcode of=main2.bin bs=? count=? skip=?
+
+virtual address start of shell (hex): 
+virtual address end of shell (hex): 
+size of shell: 
+start address of shell on disk (octal): 
+start address of shell of disk (decimal): 
+ dd if=shellcode of=shell.bin bs=? count=? skip=?
+
+total length of shellcode in bytes: 
+total size of NOP sled: 
+total size of attack program: 
+total size of nether region: 
+total size of retaddr: 
+sanity check: 

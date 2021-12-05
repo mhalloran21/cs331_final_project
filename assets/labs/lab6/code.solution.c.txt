@@ -1,0 +1,24 @@
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e92d4802 	push	{r1, fp, lr}
+   4:	e3a01048 	mov	r1, #72	; 0x48
+   8:	e92d0802 	push	{r1, fp}
+   c:	e8bd0801 	pop	{r0, fp}
+  10:	ebfffffe 	bl	0 <putchar>
+  14:	e3a01069 	mov	r1, #105	; 0x69
+  18:	e92d0802 	push	{r1, fp}
+  1c:	e8bd0801 	pop	{r0, fp}
+  20:	ebfffffe 	bl	0 <putchar>
+  24:	e3a01021 	mov	r1, #33	; 0x21
+  28:	e92d0802 	push	{r1, fp}
+  2c:	e8bd0801 	pop	{r0, fp}
+  30:	ebfffffe 	bl	0 <putchar>
+  34:	e3a0100a 	mov	r1, #10
+  38:	e92d0802 	push	{r1, fp}
+  3c:	e8bd0801 	pop	{r0, fp}
+  40:	ebfffffe 	bl	0 <putchar>
+  44:	e0211001 	eor	r1, r1, r1
+  48:	e92d0802 	push	{r1, fp}
+  4c:	e8bd0801 	pop	{r0, fp}
+  50:	e8bd8802 	pop	{r1, fp, pc}

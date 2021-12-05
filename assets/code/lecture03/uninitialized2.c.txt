@@ -1,0 +1,22 @@
+/* This example shows a failure to initialize a variable.
+ * What is its output?
+ */
+
+#include <stdio.h>
+
+int foo() {
+  int a = 331;
+  return a;
+}
+
+int bar() {
+  int b;
+  return b;
+}
+
+int main() {
+  foo();
+  int num = bar();
+  printf("%d rocks!\n", num);
+  return 0;
+}

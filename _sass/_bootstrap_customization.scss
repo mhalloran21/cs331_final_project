@@ -1,318 +1,324 @@
-// This is the place to place Bootstrap-related CSS customizations.
-// As example you can start by importing the _bootswatch.scss file from one of the
-// theme provided by https://bootswatch.com .
-
-// Minty 4.3.1
+// Sketchy 4.1.3
 // Bootswatch
+
 
 // Variables ===================================================================
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Montserrat" !default;
+$web-font-path: "https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch" !default;
 @import url($web-font-path);
 
 // Navbar ======================================================================
 
 .navbar {
-  font-family: $headings-font-family;
-}
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 25px 25px 55px 5px/5px 55px 25px 25px;
 
-.bg-dark {
-  background-color: $secondary !important;
-}
+  &.bg-light {
+    border-color: $gray-800;
+  }
 
-.border-dark {
-  border-color: $secondary !important;
+  &.fixed-top {
+    border-radius: 0 25px 225px 0/25px 0 25px 255px;
+    border-width: 0 0 2px 0;
+  }
+
+  &.fixed-bottom {
+    border-radius: 255px 25px 0 25px/25px 225px 25px 0;
+    border-width: 2px 0 0 0;
+  }
+
+  &-brand {
+    font-family: $headings-font-family;
+    font-weight: normal;
+    text-decoration: none;
+  }
 }
 
 // Buttons =====================================================================
 
 .btn {
-  font-family: $headings-font-family;
-
-  &,
-  &:hover {
-    color: $white;
-  }
-
-  &-light,
-  &-light:hover {
-    color: $gray-700;
-  }
-
-  &-link,
-  &-link:hover {
-    color: $primary;
-  }
-
-  &-link.disabled:hover {
-    color: $gray-600;
-  }
-
-  &-outline-primary {
-    color: $primary;
-  }
-
-  &-outline-secondary {
-    color: $secondary;
-  }
-
-  &-outline-success {
-    color: $success;
-  }
-
-  &-outline-info {
-    color: $info;
-  }
-
-  &-outline-warning {
-    color: $warning;
-  }
-
-  &-outline-danger {
-    color: $danger;
-  }
-
-  &-outline-dark {
-    color: $dark;
-  }
-
-  &-outline-light {
-    color: $light;
-  }
+  border-radius: $border-radius;
+  text-decoration: none;
 }
 
 // Typography ==================================================================
 
+button, input, optgroup, select, textarea {
+  font-family: $font-family-sans-serif;
+}
+
+blockquote {
+  border-radius: 15px 27px 25px 25px/25px 25px 305px 635px;
+}
+
 // Tables ======================================================================
 
-.table {
-
-  &-primary,
-  &-secondary,
-  &-success,
-  &-info,
-  &-warning,
-  &-danger {
-    color: #fff;
-  }
-
-  &-primary {
-    &, > th, > td {
-      background-color: $primary;
-    }
-  }
-
-  &-secondary {
-    &, > th, > td {
-      background-color: $secondary;
-    }
-  }
-
-  &-light {
-    &, > th, > td {
-      background-color: $light;
-    }
-  }
-
-  &-dark {
-    &, > th, > td {
-      background-color: $dark;
-    }
-  }
-
-  &-success {
-    &, > th, > td {
-      background-color: $success;
-    }
-  }
-
-  &-info {
-    &, > th, > td {
-      background-color: $info;
-    }
-  }
-
-  &-danger {
-    &, > th, > td {
-      background-color: $danger;
-    }
-  }
-
-  &-warning {
-    &, > th, > td {
-      background-color: $warning;
-    }
-  }
-
-  &-active {
-    &, > th, > td {
-      background-color: $table-active-bg;
-    }
-  }
-
-  &-hover {
-
-    .table-primary:hover {
-      &, > th, > td {
-        background-color: darken($primary, 5%);
-      }
-    }
-
-    .table-secondary:hover {
-      &, > th, > td {
-        background-color: darken($secondary, 5%);
-      }
-    }
-
-    .table-light:hover {
-      &, > th, > td {
-        background-color: darken($light, 5%);
-      }
-    }
-
-    .table-dark:hover {
-      &, > th, > td {
-        background-color: darken($dark, 5%);
-      }
-    }
-
-    .table-success:hover {
-      &, > th, > td {
-        background-color: darken($success, 5%);
-      }
-    }
-
-    .table-info:hover {
-      &, > th, > td {
-        background-color: darken($info, 5%);
-      }
-    }
-
-    .table-danger:hover {
-      &, > th, > td {
-        background-color: darken($danger, 5%);
-      }
-    }
-
-    .table-warning:hover {
-      &, > th, > td {
-        background-color: darken($warning, 5%);
-      }
-    }
-
-    .table-active:hover {
-      &, > th, > td {
-        background-color: $table-active-bg;
-      }
-    }
-  }
-
-  .thead-dark th {
-    background-color: $primary;
-    border-color: $table-border-color;
-    font-family: $headings-font-family;
+table {
+  th,
+  td {
+    background-color: #fff;
   }
 }
 
+.table-bordered {
+  background-color: $gray-800;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 5px 25px 5px 25px/25px 5px 25px 5px;
+  overflow: hidden;
+
+  th,
+  td {
+    border-radius: 5px 5px 25px 4px/5px 4px 3px 5px;
+  }
+
+  .table-success,
+  .table-success:hover {
+    td, th {
+      background-color: $success;
+      color: $white;
+    }
+  }
+
+  .table-info,
+  .table-info:hover {
+    td, th {
+      background-color: $info;
+      color: $white;
+    }
+  }
+
+  .table-warning,
+  .table-warning:hover {
+    td, th {
+      background-color: $warning;
+      color: $white;
+    }
+  }
+
+  .table-danger,
+  .table-danger:hover {
+    td, th {
+      background-color: $danger;
+      color: $white;
+    }
+  }
+}
+
+.table-dark {
+  th,
+  td,
+  &.table-hover .table-active:hover > th,
+  &.table-hover .table-active:hover > td {
+    background-color: $gray-800;
+  }
+  
+}
+
+
 // Forms =======================================================================
 
-legend {
-  font-family: $headings-font-family;
+input,
+.form-control {
+  border-radius: $border-radius;
+}
+
+textarea,
+textarea.form-control,
+select,
+select.form-control {
+  border-radius: $border-radius-lg !important;
+}
+
+[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: -1.2em;
+    top: -0.9em;
+    display: inline-block;
+    width: 15px;
+    height: 16px;
+    border: 2px solid $gray-800;
+    border-radius: 2px 8px 2px 4px / 5px 3px 5px 3px;
+  }
+
+  &:checked:after {
+    content: "x";
+    position: absolute;
+    left: -0.64em;
+    top: -0.48em;
+    font-size: 1.5rem;
+    line-height: 0.5;
+    color: $gray-800;
+  }
+
+  &:disabled {
+    &:before {
+      border: 2px solid $gray-500;
+    }
+  }
+}
+
+[type="radio"] {
+  position: relative;
+  appearance: none;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: -1.2em;
+    top: -0.9em;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid $gray-800;
+    border-radius: 50% 45% 40% 50% / 40% 50% 50% 45%;
+  }
+
+  &:checked:before {
+    background-color: $gray-800;
+  }
+
+  &:disabled {
+    &:before {
+      border: 2px solid $gray-500;
+    }
+  }
+}
+
+.form-check-label {
+  padding-left: 2.5rem;
 }
 
 // Navs ========================================================================
 
 .dropdown-menu {
-  font-family: $font-family-sans-serif;
+  border-radius: 555px 25px 25px 25px/25px 25px 25px 555px;
+  overflow: hidden;
+}
+
+.dropdown-divider {
+  border-top-width: 2px;
+}
+
+.list-group {
+  background-color: $gray-800;
+  border: 2px solid $gray-800;
+  border-radius: 45px 15px 35px 5px/15px 5px 15px 65px;
+  overflow: hidden;
+
+  &-item {
+    border-left: none;
+    border-right: none;
+    border-top: 2px solid $gray-800;
+    border-radius: 255px 5px 225px 5px/25px 225px 25px 255px;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.nav-link,
+.page-link,
+.list-group-item,
+.dropdown-item {
+  text-decoration: none;
+}
+
+.nav-tabs {
+  .nav-link {
+    border-radius: 45px 15px 225px 5px/25px 225px 25px 255px;
+  }
 }
 
 .breadcrumb {
-  a {
-    color: $navbar-dark-color;
-  }
+  border: 2px solid $gray-800;
+}
 
-  a:hover {
-    color: $white;
-    text-decoration: none;
+.pagination {
+  .page-link {
+    border-radius: 425px 255px 25px 25px/25px 25px 5px 25px;
   }
 }
 
 // Indicators ==================================================================
 
-.alert {
-  color: $white;
-
-  h1, h2, h3, h4, h5, h6 {
-    color: inherit;
-  }
-
-  a,
-  .alert-link {
-    color: $white;
-  }
-
-  &-primary {
-    &, > th, > td {
-      background-color: $primary;
-    }
-  }
-
-  &-secondary {
-    &, > th, > td {
-      background-color: $secondary;
-    }
-  }
-
-  &-success {
-    &, > th, > td {
-      background-color: $success;
-    }
-  }
-
-  &-info {
-    &, > th, > td {
-      background-color: $info;
-    }
-  }
-
-  &-danger {
-    &, > th, > td {
-      background-color: $danger;
-    }
-  }
-
-  &-warning {
-    &, > th, > td {
-      background-color: $warning;
-    }
-  }
-
-  &-dark {
-    &, > th, > td {
-      background-color: $dark;
-    }
-  }
-
-  &-light {
-    &, > th, > td {
-      background-color: $light;
-    }
-  }
-
-  &-light {
-    &,
-    & a:not(.btn),
-    & .alert-link {
-      color: $body-color;
-    }
-  }
+.progress {
+  border: 2px solid $gray-800;
 }
 
 .badge {
-  color: $white;
+  &-pill {
+    border-radius: 7rem 8rem 8rem 8rem / 4rem 5rem 6rem 6rem;
+  }
 
-  &-light {
-    color: $gray-700;
+  &-warning {
+    color: $white;
+  }
+}
+
+.alert {
+  &-dismissible {
+    .close {
+      color: transparent;
+
+      &:before {
+        right: 1rem;
+        top: 0.8rem;
+      }
+    }
+
+    &.alert-success {
+      border-color: $success;
+
+      &,
+      .alert-link,
+      .close:before {
+        color: $success;
+      }
+    }
+
+    &.alert-info {
+      border-color: $info;
+
+      &,
+      .alert-link,
+      .close:before {
+        color: $info;
+      }
+    }
+
+    &.alert-warning {
+      border-color: $warning;
+
+      &,
+      .alert-link,
+      .close:before {
+        color: $warning;
+      }
+    }
+
+    &.alert-danger {
+      border-color: $danger;
+
+      &,
+      .alert-link,
+      .close:before {
+        color: $danger;
+      }
+    }
   }
 }
 
@@ -320,9 +326,86 @@ legend {
 
 // Containers ==================================================================
 
-.card,
-.list-group-item {
-  h1, h2, h3, h4, h5, h6 {
-    color: inherit;
+.card {
+  border-radius: 5px 5px 5px 5px/25px 25px 25px 5px;
+
+  &-outline {
+    &-primary,
+    &-success,
+    &-info,
+    &-warning,
+    &-danger {
+      border-width: 2px;
+    }
+  }
+
+  &-header {
+    border-bottom-width: 2px;
+    border-color: inherit;
+
+    &:first-child {
+      border-radius: 3px 3px 0 0/23px 23px 0 0;
+    }
+  }
+
+  &-footer {
+    border-top-width: 2px;
+  }
+}
+
+.jumbotron {
+  border: 2px solid $gray-800;
+}
+
+.modal {
+  &-content {
+    border-radius: 15px 5px 5px 25px/5px 25px 25px 5px;
+  }
+}
+
+.popover {
+  padding: 0;
+  border-radius: 45px 85px 15px 25px/15px 10px 35px 555px;
+
+  &-title {
+    border-bottom: 2px solid $gray-800;
+  }
+
+  &.popover-left::before,
+  &.bs-tether-element-attached-right::before {
+    right: -13px;
+  }
+
+  &.popover-top::before,
+  &.bs-tether-element-attached-bottom::before {
+    bottom: -13px;
+  }
+
+  &.popover-bottom::before,
+  &.bs-tether-element-attached-top::before {
+    top: -13px;
+  }
+
+  &.popover-right::before,
+  &.bs-tether-element-attached-left::before {
+    left: -13px;
+  }
+}
+
+pre {
+  border: 2px solid $gray-800;
+  border-radius: 15px 5px 5px 25px/5px 25px 25px 5px;
+}
+
+.close,
+.close:hover,
+.close:focus,
+.close:active {
+  opacity: 1;
+
+  &:before {
+    position: absolute;
+    content: "X";
+    color: $gray-800;
   }
 }

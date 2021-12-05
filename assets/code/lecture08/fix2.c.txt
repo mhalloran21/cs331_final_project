@@ -1,0 +1,39 @@
+/*
+ * This version fixes the buggy program by recognizing that 
+ * structs are "value types" and can be returned in their
+ * entirety.  Doing so copies them.  This is much simpler
+ * than using malloc (observe: no need to free!), but there
+ * is a cost since our program now copies many more bytes
+ * (at least 20 * 3 bytes) than it did before
+ * (sizeof(record_t*) bytes).
+ *
+ * As in the last fix, we also use strcpy to do the string
+ * copy.  Note: strcpy is a dangerous function!
+ */
+
+#include <stdio.h>
+#include <string.h>
+
+typedef struct record {
+  char first_name[20];
+  char last_name[20];
+  char identifier[20];
+} record_t;
+
+record_t create_record(char* fname, char* lname, char* id) {
+  record_t r;
+  strcpy(r.first_name, fname);
+  strcpy(r.last_name, lname);
+  strcpy(r.identifier, id);
+  return r;
+}
+
+int main() {
+  record_t r = create_record("Jason", "Bourne", "70014051");
+  printf("First name: %s\n", r.first_name);
+  printf("Last name: %s\n", r.last_name);
+  printf("Identifier: %s\n", r.identifier);
+  
+  return 0;
+}
+

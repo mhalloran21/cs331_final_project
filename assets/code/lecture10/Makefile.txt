@@ -1,0 +1,16 @@
+globalthermonuclearwar: globalthermonuclearwar.c
+	gcc -g -w -fno-stack-protector globalthermonuclearwar.c -o globalthermonuclearwar
+
+globalthermonuclearwar.s: globalthermonuclearwar.c
+	gcc -w -c -S -fno-dwarf2-cfi-asm -fno-asynchronous-unwind-tables -fno-exceptions -fno-delete-null-pointer-checks -z execstack -fno-stack-protector globalthermonuclearwar.c
+
+# note that you will not be able to compile simple.s because
+# I've removed important labels
+simple.s: globalthermonuclearwar.s
+	egrep -v "^\s*\.|^\s*@" globalthermonuclearwar.s > simple.s
+
+.PHONY=clean
+clean:
+	@rm -f globalthermonuclearwar
+	@rm -f globalthermonuclearwar.s
+	@rm -f simple.s

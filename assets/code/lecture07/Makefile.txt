@@ -1,0 +1,13 @@
+# to be used with the sum.c program shown in an earlier lecture
+.PHONY: all
+all: sum
+
+sum: sum.c
+#	replace this line:
+#	gcc -Wall -g sum.c -o sum
+# 	with this line:
+	gcc -Wall -g sum.c -o sum -fsanitize=address -static-libasan
+
+.PHONY: clean
+clean:
+	rm -f sum

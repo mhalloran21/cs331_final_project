@@ -1,0 +1,39 @@
+- key: "Instructor:"
+  value: Daniel Barowy
+
+- key: "E-Mail:"
+  value: "<span style='z-index: 22'>d<span style='z-index: 21'>b<span style='z-index: 20'>a<span style='z-index: 19'>r<span style='z-index: 18'>o<span style='z-index: 17'>w<span style='z-index: 16'>y<span style='z-index: 15'>@<span style='z-index: 14'>c<span style='z-index: 13'>s<span style='z-index: 12'>.<span style='z-index: 11'>w<span style='z-index: 10'>i<span style='z-index: 9'>l<span style='z-index: 8'>l<span style='z-index: 7'>i<span style='z-index: 6'>a<span style='z-index: 5'>m<span style='z-index: 4'>s<span style='z-index: 3'>.<span style='z-index: 2'>e<span style='z-index: 1'>d<span style='z-index: 0'>u</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>"
+
+- key: "Office:"
+  value: Thompson Chemistry Lab, room 307
+
+- key: "Lectures:"
+  value: |+
+    Mon, Thur 2:35&mdash;3:50pm
+    in Schow Science Library, room 30A
+
+- key: "Lab:"
+  value: |+
+    Section 1: Wed 1:10&mdash;2:25pm
+    in the Ward Lab (Thompson Bio, room 301)
+    Section 2: Wed 2:35&mdash;3:50pm
+    in the Ward Lab (Thompson Bio, room 301)
+
+- key: "Required Reading:"
+  value: |+
+    <em>The Cuckoo's Egg: Tracking a Spy Through the Maze of Computer Espionage</em>, by Clifford Stoll (ISBN: 1416507787)
+    and other readings posted on this site.
+
+- key: "Syllabus"
+  value: <a href="assets/handouts/01_syllabus.pdf" target="_blank">01_syllabus.pdf</a>
+  
+- key: "Class Schedule (subject to revision)"
+  value: |+ 
+    <a href="assets/handouts/04_schedule.pdf" target="_blank">04_schedule.pdf</a> (version&#58; 10/04/21)
+    <a href="assets/handouts/05_estimated_work_hours.pdf" target="_blank">05_estimated_work_hours.pdf</a> (version&#58; 9/6/21)
+
+- key: "Posted Grades"
+  value: <a href="https://glow.williams.edu/courses/3267514">GLOW</a>
+
+- key: "Anonymous Feedback"
+  value: <a href="feedback.html">click here</a>

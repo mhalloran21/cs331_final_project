@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+  int x = 0;
+  x += 72;
+  putchar(x);
+  x += 33;
+  putchar(x);
+  x -= 72;
+  putchar(x);
+  x -= 23;
+  putchar(x);
+  return 0;
+}
+
