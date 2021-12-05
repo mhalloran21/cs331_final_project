@@ -23,7 +23,7 @@
   value: <a href="https://glow.williams.edu/courses/3267514">GLOW</a>
 
 - key: "Anonymous Feedback"
-  value: <button type="button" class="btn btn-primary" href="feedback.html" onclick=countClicks()>click here</button>
+  value: <button type="button" class="btn btn-primary" onclick=countClicks()>Buy now</button>
 
 - key: "Clicks"
   value: {clickCounts()}
