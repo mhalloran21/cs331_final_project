@@ -15,16 +15,16 @@ title: Menu
 			Price
 		</th>
 	</tr>
-	{% for info in site.data.lectures %}
+	{% for info in site.data.menu %}
 	<tr>
 	  <td>
-	    {{ info.number }}
+	    {{ info.item }}
 	  </td>
 	  <td>
-	    {{ info.date }}
+	    {{ info.description }}
 	  </td>
 	  <td>
-	    {{ info.slides | newline_to_br }}
+	    {{ info.price | newline_to_br }}
 	  </td>
 	</tr>
 	{% endfor %}
