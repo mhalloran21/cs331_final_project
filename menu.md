@@ -1,21 +1,18 @@
 ---
 layout: page
-title: Lectures
+title: Menu
 ---
 
 <table class="table table-hover">
 	<tr>
 		<th>
-			Lecture
+			Item
 		</th>
 		<th>
-			Date
+			Description
 		</th>
 		<th>
-			Topic
-		</th>
-		<th>
-			Slides
+			Price
 		</th>
 	</tr>
 	{% for info in site.data.lectures %}
@@ -25,9 +22,6 @@ title: Lectures
 	  </td>
 	  <td>
 	    {{ info.date }}
-	  </td>
-	  <td>
-	    {{ info.topic | newline_to_br }}
 	  </td>
 	  <td>
 	    {{ info.slides | newline_to_br }}
