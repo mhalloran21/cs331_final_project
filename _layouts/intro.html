@@ -8,10 +8,10 @@ layout: default
     <div class="col-sm">
       <script type="text/javascript">
         document.write(randomXKCD());
-	document.write(clickcounts()); 
+	document.write(countclicks()); 
       </script>
     </div>
-     <div>Number of clicks: {clickCounts()}</div>
+     <div>Number of clicks: {countclicks()}</div>
     <div class="col-sm">
       <table class="table table-hover">
 	{% for info in site.data.classinfo %}
