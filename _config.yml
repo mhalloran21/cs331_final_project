@@ -28,7 +28,7 @@ plugins:
 # A list of the pages to display in the navigation bar
 header_pages:
   - index.md
-  - lectures.md
+  - menu.md
   - assignments.md
   - handouts.md
   - help_hours.md
