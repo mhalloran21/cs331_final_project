@@ -13,9 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "CSCI 331: Introduction to Computer Security, Fall 2021"
+title: "CSCI 331: Vulnerable site"
 
-repository: "williams-cs/cs331-f21-www"
+repository: "mhalloran21/mhalloran21.github.io"
 
 newline: >
   :
