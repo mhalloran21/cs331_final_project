@@ -24,6 +24,3 @@
 
 - key: "Anonymous Feedback"
   value: <button type="button" class="btn btn-primary" onclick=countClicks()>Buy now</button>
-
-- key: "Clicks"
-  value: {clickCounts()}
