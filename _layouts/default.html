@@ -95,9 +95,9 @@
 	  let tag = '<a href="' + xkcd.linkto + '"><img src="' + xkcd.url + '" title="' + xkcd.mouseover + '" /></a>';
 	  return tag;
       }
-	    
+	
+      let count = 0;
       function countclicks() {
-	  let count = 0;
 	  count++;
 	  let countTag = '<p> Number of clicks = '+count+'</p>';
 	  document.write(countTag);
