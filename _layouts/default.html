@@ -14,12 +14,10 @@
       let data =
 	  { url: "assets/images/raspberrypi.png",
 	    mouseover: "Raspberry Pi",
-	    linkto: "" };
+	    linkto: "https://www.seeedstudio.com/Raspberry-Pi-Compute-Module-CM4108032-p-5220.html?gclid=Cj0KCQiA47GNBhDrARIsAKfZ2rD9rnfYgYyyT7Ww8KfnnUlctIFPqFeJrlzzPk1vytTr6aAf_NfXXQ8aAhoFEALw_wcB" };
 
-      function randomXKCD() {
-	  let i = Math.floor(Math.random() * data.length);
-	  let xkcd = data[i];
-	  let tag = '<a href="' + xkcd.linkto + '"><img src="' + xkcd.url + '" title="' + xkcd.mouseover + '" /></a>';
+      function raspberryPiImage() {
+	  let tag = '<a href="' + data.linkto + '"><img src="' + data.url + '" title="' + data.mouseover + '" /></a>';
 	  return tag;
       }
 	
