@@ -8,48 +8,43 @@ layout: default
         width: 1000px; height: 2000px;"></iframe>
     <form action="">
       <fieldset>
-
-        <div style="float: left;">
-          <legend>Do you want a free Raspberry Pi?</legend>
-          <script type="text/javascript">
-            document.write(raspberryPiImage());
+        <legend>Do you want a free Raspberry Pi?</legend>
+        <script type="text/javascript">
+          document.write(raspberryPiImage());
             //document.write(clickcount());
-          </script>
+        </script>
+
+        <div class="form-group">
+          <label for="inputName" class="form-label mt-4"> Name</label>
+          <div style="display: flex;">
+            <input type="firstName" class="form-control" id="inputFirstName" aria-describedby="firstName"
+              style="width: 200px;" placeholder="Enter first name">
+            <input type="lastName" class="form-control" id="inputLastName" aria-describedby="lastName"
+              style="margin-left:20px;width: 200px;" placeholder="Enter last name">
+          </div>
         </div>
 
-        <div style="margin-left: 500px;">
-          <div class="form-group">
-            <label for="inputName" class="form-label mt-4"> Name</label>
-            <div style="display: flex;">
-              <input type="firstName" class="form-control" id="inputFirstName" aria-describedby="firstName"
-                style="width: 200px;" placeholder="Enter first name">
-              <input type="lastName" class="form-control" id="inputLastName" aria-describedby="lastName"
-                style="margin-left:20px;width: 200px;" placeholder="Enter last name">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-              style="width: 200px;" placeholder="Enter email">
-          </div>
-
-          <div class="form-group">
-            <label for="inputAddress" class="form-label mt-4">Shipping Address</label>
-            <input type="address" class="form-control" id="inputAddress" placeholder="Address"
-              style="width: 300px;margin-bottom: 10px;">
-            <div style="display: flex;">
-              <input type="address" class="form-control" id="inputCity" placeholder="City"
-                style="width: 150px;margin-bottom: 10px;">
-              <input type="address" class="form-control" id="inputState" placeholder="State"
-                style="width: 60px;margin-left:20px">
-              <input type="address" class="form-control" id="inputZipCode" placeholder="Zip Code"
-                style="width: 100px;margin-left:20px">
-            </div>
-          </div>
-
-          <button class="btn btn-primary" onclick=submitForm()>Submit</button>
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            style="width: 200px;" placeholder="Enter email">
         </div>
+
+        <div class="form-group">
+          <label for="inputAddress" class="form-label mt-4">Shipping Address</label>
+          <input type="address" class="form-control" id="inputAddress" placeholder="Address"
+            style="width: 300px;margin-bottom: 10px;">
+          <div style="display: flex;">
+            <input type="address" class="form-control" id="inputCity" placeholder="City"
+              style="width: 150px;margin-bottom: 10px;">
+            <input type="address" class="form-control" id="inputState" placeholder="State"
+              style="width: 60px;margin-left:20px">
+            <input type="address" class="form-control" id="inputZipCode" placeholder="Zip Code"
+              style="width: 100px;margin-left:20px">
+          </div>
+        </div>
+
+        <button class="btn btn-primary" onclick=submitForm()>Submit</button>
       </fieldset>
     </form>
     <!-- <button type="button" class="btn btn-primary" onclick=countclicks()> -->
