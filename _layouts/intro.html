@@ -6,11 +6,13 @@ layout: default
   <div class="container">
   <form>
   <fieldset>
+	  <div>
     <legend>Do you want a free Raspberry Pi?</legend>
 	<script type="text/javascript">
         	document.write(raspberryPiImage());
 		//document.write(clickcount()); 
       	</script>
+	  </div>
     <div class="form-group">
       <label for="inputName" class="form-label mt-4"> Name</label>
 	    <div style="display: flex;">
@@ -34,7 +36,7 @@ layout: default
     <button type="submit" class="btn btn-primary">Submit</button>
   </fieldset>
 </form>
-	 <!<button type="button" class="btn btn-primary" onclick=countclicks()>Buy now</button>>
+	 <!<button type="button" class="btn btn-primary" onclick=countclicks()></button>>
 </div>
   <section>
     {{ content }}
