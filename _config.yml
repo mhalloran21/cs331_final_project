@@ -28,11 +28,6 @@ plugins:
 # A list of the pages to display in the navigation bar
 header_pages:
   - index.md
-  - shop.md
-  - menu.md
-  - assignments.md
-  - handouts.md
-  - help_hours.md
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
