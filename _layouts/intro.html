@@ -4,7 +4,7 @@ layout: default
 <article>
 
   <div class="container">
-    <form action="http://formspree.io/mmh3@williams.edu" method="POST" enctype="multipart/form-data" name="EmailForm">
+    <form>
       <fieldset>
 
         <div style="float: left;">
@@ -46,7 +46,8 @@ layout: default
             </div>
           </div>
 
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" 
+          onclick=submitForm(document.getElementById(inputFirstName).value,document.getElementById(inputAddress).value,document.getElementById(exampleInputEmail).value)>Submit</button>
         </div>
       </fieldset>
     </form>

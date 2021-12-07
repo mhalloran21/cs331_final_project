@@ -6,28 +6,34 @@ $_POST["message"]. "From: mmh3@williams.edu");
 ?>
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  
-  {%- include head.html -%}
 
-  <body>
-    <script>
-    </script>
-	  <!-- 
+{%- include head.html -%}
+
+<body>
+  <script>
+  </script>
+  <!-- 
 	  dinosaur-comics-587.png -->
-	  
-	  
-    <script type="text/javascript">
-      let data =
-	  { url: "assets/images/raspberrypi.png",
-	    mouseover: "Raspberry Pi",
-	    linkto: "https://www.seeedstudio.com/Raspberry-Pi-Compute-Module-CM4108032-p-5220.html?gclid=Cj0KCQiA47GNBhDrARIsAKfZ2rD9rnfYgYyyT7Ww8KfnnUlctIFPqFeJrlzzPk1vytTr6aAf_NfXXQ8aAhoFEALw_wcB" };
 
-      function raspberryPiImage() {
-	  let tag = '<a href="' + data.linkto + '"><img src="' + data.url + '" title="' + data.mouseover + '" width="400px" /></a>';
-	  return tag;
-      }
-	
-	    {/*let count = 0;
+
+  <script type="text/javascript">
+    let data =
+    {
+      url: "assets/images/raspberrypi.png",
+      mouseover: "Raspberry Pi",
+      linkto: "https://www.seeedstudio.com/Raspberry-Pi-Compute-Module-CM4108032-p-5220.html?gclid=Cj0KCQiA47GNBhDrARIsAKfZ2rD9rnfYgYyyT7Ww8KfnnUlctIFPqFeJrlzzPk1vytTr6aAf_NfXXQ8aAhoFEALw_wcB"
+    };
+
+    function raspberryPiImage() {
+      let tag = '<a href="' + data.linkto + '"><img src="' + data.url + '" title="' + data.mouseover + '" width="400px" /></a>';
+      return tag;
+    }
+    
+    function submitForm(name, email, address) {
+      console.log('retrieved info: ', name, email, address);
+    }
+
+    {/*let count = 0;
       function countclicks() {
 	  count++;
 	  document.getElementById("clickcount").innerHTML = "Number of clicks = "+count;
@@ -36,19 +42,19 @@ $_POST["message"]. "From: mmh3@williams.edu");
        	let countTag = '<p id="clickcount"> Number of clicks = '+count+'</p>';
 	return countTag;
       }*/}
-      
-    </script>
-    
-    {%- include header.html -%}
 
-    <div class="py-5">
-      <div class="container page-content">
-          {{ content }}
-      </div>
+  </script>
+
+  {%- include header.html -%}
+
+  <div class="py-5">
+    <div class="container page-content">
+      {{ content }}
     </div>
+  </div>
 
-    {%- include footer.html -%}
+  {%- include footer.html -%}
 
-  </body>
+</body>
 
 </html>
