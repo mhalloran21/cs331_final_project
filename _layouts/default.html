@@ -1,9 +1,3 @@
-<?php
-if($_POST["message"]) {
-  mail("your@email.address", "Here is the subject line",
-$_POST["message"]. "From: mmh3@williams.edu");
-}
-?>
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
@@ -32,16 +26,6 @@ $_POST["message"]. "From: mmh3@williams.edu");
     function submitForm() {
       console.log('retrieved info: ', document.getElementById("inputFirstName").value);
     }
-
-    {/*let count = 0;
-      function countclicks() {
-	  count++;
-	  document.getElementById("clickcount").innerHTML = "Number of clicks = "+count;
-      }
-      function clickcount() {
-       	let countTag = '<p id="clickcount"> Number of clicks = '+count+'</p>';
-	return countTag;
-      }*/}
 
   </script>
 
