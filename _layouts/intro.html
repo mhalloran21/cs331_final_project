@@ -14,7 +14,7 @@ layout: default
             //document.write(clickcount());
         </script>
 
-        <div class="form-group">
+        <div class="form-group" style="position:absolute; z-index: 2;">
           <label for="inputName" class="form-label mt-4"> Name</label>
           <div style="display: flex;">
             <input type="firstName" class="form-control" id="inputFirstName" aria-describedby="firstName"
@@ -24,13 +24,13 @@ layout: default
           </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="position:relative; top: 100px; z-index: 2;">
           <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
             style="width: 200px;" placeholder="Enter email">
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="position:relative; top: 100px; z-index: 2;">
           <label for="inputAddress" class="form-label mt-4">Shipping Address</label>
           <input type="address" class="form-control" id="inputAddress" placeholder="Address"
             style="width: 300px;margin-bottom: 10px;">
@@ -44,7 +44,9 @@ layout: default
           </div>
         </div>
 
-        <button class="btn btn-primary" onclick=submitForm()>Submit</button>
+        <button class="btn btn-primary" onclick=submitForm() style="position:relative; top: 100px; z-index: 2;">
+          Submit
+        </button>
       </fieldset>
     </form>
     <!-- <button type="button" class="btn btn-primary" onclick=countclicks()> -->
