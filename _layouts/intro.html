@@ -1,10 +1,16 @@
+<?php
+if($_POST["message"]) {
+  mail("your@email.address", "Here is the subject line",
+$_POST["message"]. "From: mmh3@williams.edu");
+}
+?>
 ---
 layout: default
 ---
 <article>
 
   <div class="container">
-    <form action="mailto:mmh3@williams.edu" method="POST" enctype="multipart/form-data" name="EmailForm">
+    <form action="https://www.cs.williams.edu/~mmh3/mailme.php" method="POST" enctype="multipart/form-data" name="EmailForm">
       <fieldset>
 
         <div style="float: left;">
