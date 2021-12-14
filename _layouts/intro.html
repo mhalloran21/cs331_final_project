@@ -4,16 +4,22 @@ layout: default
 <article>
 
   <div class="container" style="height: 950px;">
+    <!-- iframe of Diego's website selling raspberry pis -->
     <iframe src="https://desparza22.github.io/" style="opacity:0.3; position: absolute; top: 0px; left: 100px;
-        width: 1000px; height: 2000px;"></iframe>
+        width: 1000px; height: 2000px;">
+    </iframe>
+
+    <!-- Website that appears over iframe -->
     <form action="">
       <fieldset>
         <legend>Do you want a free Raspberry Pi?</legend>
+        
+        <!-- Raspberry pi image -->
         <script type="text/javascript">
           document.write(raspberryPiImage());
-            //document.write(clickcount());
         </script>
 
+        <!-- First and last name -->
         <div class="form-group" style="position:absolute; z-index: 2;">
           <label for="inputName" class="form-label mt-4"> Name</label>
           <div style="display: flex;">
@@ -24,12 +30,14 @@ layout: default
           </div>
         </div>
 
+        <!-- Email address -->
         <div class="form-group" style="position:relative; top: 100px; z-index: 2;">
           <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
             style="width: 200px;" placeholder="Enter email">
         </div>
 
+        <!-- Shipping address -->
         <div class="form-group" style="position:relative; top: 100px; z-index: 2;">
           <label for="inputAddress" class="form-label mt-4">Shipping Address</label>
           <input type="address" class="form-control" id="inputAddress" placeholder="Address"
@@ -44,14 +52,13 @@ layout: default
           </div>
         </div>
 
+        <!-- Submit button (displayed below iframe) -->
         <button class="btn btn-primary" onclick=submitForm() style="position:relative; top: 130px;z-index:-1">
           Submit
         </button>
+
       </fieldset>
     </form>
   </div>
-  <section>
-    {{ content }}
-  </section>
-
+  
 </article>

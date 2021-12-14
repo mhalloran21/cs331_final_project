@@ -4,13 +4,8 @@
 {%- include head.html -%}
 
 <body>
-  <script>
-  </script>
-  <!-- 
-	  dinosaur-comics-587.png -->
-
-
   <script type="text/javascript">
+    // Set up data for raspberry pi image/link.
     let data =
     {
       url: "assets/images/raspberrypi.png",
@@ -18,11 +13,13 @@
       linkto: "https://www.seeedstudio.com/Raspberry-Pi-Compute-Module-CM4108032-p-5220.html?gclid=Cj0KCQiA47GNBhDrARIsAKfZ2rD9rnfYgYyyT7Ww8KfnnUlctIFPqFeJrlzzPk1vytTr6aAf_NfXXQ8aAhoFEALw_wcB"
     };
 
+    // Set up component for raspberry pi image.
     function raspberryPiImage() {
       let tag = '<a href="' + data.linkto + '"><img src="' + data.url + '" title="' + data.mouseover + '" width="550px" /></a>';
       return tag;
     }
     
+    // Grabs first name from form and logs to console
     function submitForm() {
       console.log('retrieved info: ', document.getElementById("inputFirstName").value);
     }
